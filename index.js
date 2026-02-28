@@ -18,7 +18,7 @@ async function readAllBooks(){
 app.get("/books", async(req, res) => {
     try {
         const books = await readAllBooks();
-        res.status(200).json({books})
+        res.status(200).json(books)
     } catch (error) {
         res.status(500).json({error: "Failed to fetch the Books."})
     }
